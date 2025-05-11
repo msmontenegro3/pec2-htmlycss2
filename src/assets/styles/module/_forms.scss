@@ -1,0 +1,70 @@
+/* Colores Modernos */
+$form-background: lch(81.45% 29 250.93);
+$form-border: lch(73.91% 40.23 273.14);
+$form-button: lch(65% 40 270);
+$form-button-hover: lch(50% 40 270);
+$form-text-color: oklch(0.1 0.05 270);
+
+/* Estilos del Formulario */
+.contacto-form {
+    background-color: $form-background;
+    padding: 2rem;
+    border: 2px solid $form-border;
+    
+    border-radius: 12px;
+    box-shadow: 0 8px 20px oklch(0.3 0.05 270 / 0.15);
+
+    .form-label {
+        color: $form-text-color;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+        background-color: lch(92.55% 12.11 249.46);
+        padding: 0.75rem;
+        border: 2px solid $form-border;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+
+        &:focus {
+            border-color: $form-button;
+            background-color: lch(89.02% 18.17 247.31);
+            outline: none;
+            box-shadow: 0 0 0 3px oklch(0.8 0.05 270 / 0.25);
+        }
+    }
+
+    .form-text {
+        font-size: 0.85rem;
+        color: oklch(0.5 0.05 270 / 0.7);
+        margin-bottom: 1rem;
+    }
+
+    .submit-form {
+        background-color: $form-button;
+        padding: 0.75rem 1.5rem;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $form-button-hover;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+@include responsive('md') {
+    .svg{
+        width: 50%;
+        margin: auto;
+    }
+}

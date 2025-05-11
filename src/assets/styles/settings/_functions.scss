@@ -1,0 +1,4 @@
+@function palette($color, $level: 0) {
+    $levels: (light: (10%, 20%, 30%), dark: (-10%, -20%, -30%));
+    @return adjust-color($color, $lightness: nth(map-get($levels, light), abs($level)));
+}

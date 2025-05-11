@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+  <html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -8,19 +9,29 @@
     <title>UOC Boilerplate</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+
+    <include src="./views/header.html"></include>
+
+    <main>
+
+      <article class="grid container mt-5 mb-5">
+        <h1 class="grid__item py-5">Jornadas de Economía Circular</h1>
+
+        <div class="grid__item">
+          <h2 class="fst-italic">Busquemos un futuro sostenible</h2>
+          <p>La economía circular es un modelo económico que busca reducir el desperdicio y maximizar el uso eficiente de los recursos, promoviendo ciclos de producción y consumo más sostenibles. En estas jornadas, exploraremos cómo este enfoque puede transformar industrias, impulsar la innovación y fortalecer las comunidades locales, creando un futuro más próspero y resiliente para todos.</p>
+        </div>
+        
+        <img src="assets/images/portada-img.jpg" alt="Botellas de plástico" class="grid__item">
+        
+        <a  href="participantes.html" class="btn btn-secondary grid__item">Conoce a los participantes</a>
+        <p class="grid__item">JORNADAS 2025</p>
+      </article>
+      
+
+    </main>
+
+      
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

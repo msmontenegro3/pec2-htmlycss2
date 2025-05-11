@@ -1,0 +1,43 @@
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    
+
+    .card{
+        filter:grayscale(1);
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .card:hover{
+        filter: grayscale(0.1);
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@include responsive('md'){
+    .cards{
+        flex-direction: row;
+        flex: 1 1 auto;
+
+        .card{
+            flex: 45%;
+            max-width: 350px;
+        }
+    }
+
+}
+
+@include responsive('lg'){
+    .cards{
+        flex-direction: row;
+        .card{
+            flex: 30%;
+        } 
+    }
+}

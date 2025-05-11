@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  Global Reset
+\*------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*------------------------------------*\
+  Typography reset
+\*------------------------------------*/
+
+a {
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    padding-left: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}

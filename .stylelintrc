@@ -1,0 +1,52 @@
+{
+  "extends": ["stylelint-config-recommended-scss"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z]+(-[a-z]+)*(__(?:[a-z]+(-[a-z]+)*)?)?(--[a-z]+(-[a-z]+)*)?$",
+      {
+        "message": "Usa nomenclatura BEM: bloque__elemento--modificador"
+      }
+    ],
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      "rules",
+      "at-rules"
+    ],
+    "order/properties-order": [
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "display",
+      "flex",
+      "align-items",
+      "justify-content",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      "font",
+      "font-size",
+      "line-height",
+      "color",
+      "background",
+      "border",
+      "box-shadow",
+      "z-index"
+    ],
+    "scss/no-global-function-names": null,
+    "color-named": "never",
+    "max-nesting-depth": 2,
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": true,
+    "no-descending-specificity": true,
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "declaration-block-no-duplicate-properties": true,
+    "scss/dollar-variable-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
+  }
+}

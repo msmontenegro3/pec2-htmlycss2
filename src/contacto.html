@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>UOC Boilerplate</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main>
+      <h1 class="container mt-5">Déjanos tu contacto</h1>
+
+      <article class="container contacto">
+
+          <img class="svg" src="/src/assets/images/portada-s.svg" alt="Imagen de portada">
+          
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contacto-form container mt-4 mb-4">
+            <!-- Campo oculto para Netlify Forms -->
+            <input type="hidden" name="form-name" value="contact">
+        
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">Nunca compartiremos tu email con nadie más.</div>
+            </div>
+        
+            <div class="mb-3">
+                <label for="exampleInputPhone1" class="form-label">Número de teléfono</label>
+                <input type="tel" class="form-control" id="exampleInputPhone1" name="phone" required>
+            </div>
+        
+            <button type="submit" class="btn btn-primary submit-form">Enviar</button>
+        </form>
+    
+        </main>
+          
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+      </article>
+  </body>
+</html>

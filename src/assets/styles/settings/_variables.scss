@@ -1,0 +1,43 @@
+@use "bootstrap/scss/functions";
+/* ------------------------------------*\
+  Personal variables
+\* ------------------------------------*/
+$breakpoints: (
+  sm: 768px,   // Tablets verticales
+  md: 900px,   // Tablets horizontales y pequeños portátiles
+  lg: 1200px,  // Escritorios
+);
+
+$primary-color: #01374f;
+
+/* ------------------------------------*\
+  Bootstrap customization
+\* ------------------------------------*/
+
+$primary: $primary-color;
+$secondary:#7bd7ff;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+//$dark:          $gray-900;
+
+
+
+// navbar 
+$navbar-light-color: $primary;
+$navbar-light-hover-color: #0287c1;
+$navbar-light-toggler-border-color: none;
+$body-tertiary-bg: #e1f6ff;
+
+
+// buttons
+$btn-hover-bg-tint-amount: 50%;
+
+// Carousel
+
+$carousel-control-color: #fff;
+$carousel-control-opacity: 0.8;
+$carousel-control-hover-opacity: 1;
+$carousel-transition-duration: .3s;
+$carousel-control-icon-width: 3rem;

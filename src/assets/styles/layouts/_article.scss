@@ -1,0 +1,67 @@
+/* ------------------------------------*\
+  Figure with caption
+\* ------------------------------------*/
+
+figure:has(figcaption) {
+    position: relative;
+  
+    figcaption {
+    visibility: hidden;
+    }
+    img:hover {
+        filter:blur(5px);
+    }
+
+    img:hover + figcaption {
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.41);
+        font-size: 1.3rem;
+        color: #fff;
+        font-weight: bold;
+        pointer-events: none;
+    }
+    
+    @include responsive('md') {
+        img, figcaption {
+            width: 50vw;
+            margin: auto auto;
+        }
+    }
+}
+
+/* ------------------------------------*\
+  Heading styles
+\* ------------------------------------*/
+
+article :is(.main-title, h2) {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* ------------------------------------*\
+  List styles
+\* ------------------------------------*/
+
+article :is(.info-list ol, .info-list ul) {
+    background-color: #ebebeb;
+    padding: 1rem; 
+    border-radius: 10px;
+}
+
+/* ------------------------------------*\
+  Link styles
+\* ------------------------------------*/
+
+article :where(a:not(.btn)) {
+    color: #0287c1;
+    text-decoration: underline;
+    font-weight: 600;
+}

@@ -1,0 +1,29 @@
+@use "../settings/variables" as v;
+
+// Mixin (mobile-first)
+@mixin responsive($breakpoint) {
+    $min-width: map-get(v.$breakpoints, $breakpoint);
+    
+    @if $min-width {
+        @media (min-width: #{$min-width}) {
+            @content;
+        }
+    } @else {
+        @warn "El breakpoint #{$breakpoint} no está definido en v.$breakpoints.";
+    }
+}
+
+/* Mixin (container-query) */
+@mixin container-query($breakpoint) {
+    $breakpoints: v.$breakpoints;
+    $min-width: map-get($breakpoints, $breakpoint);
+    
+    @if $min-width {
+        @container (min-width: #{$min-width}) {
+            @content;
+        }
+    } @else {
+        @warn "El breakpoint #{$breakpoint} no está definido en v.$breakpoints.";
+    }
+}
+

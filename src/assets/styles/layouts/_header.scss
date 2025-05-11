@@ -1,0 +1,23 @@
+@use "../settings/variables" as v;
+
+/*------------------------------------*\
+  Logo
+\*------------------------------------*/
+.navbar-collapse {
+    text-align: center;
+}
+.navbar__logo {
+    min-width: 40px;
+    width: 4rem;
+    fill: v.$primary-color;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.nav-link:hover {
+    outline: 1px solid ;
+}
