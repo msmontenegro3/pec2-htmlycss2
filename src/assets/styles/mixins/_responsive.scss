@@ -13,17 +13,4 @@
     }
 }
 
-/* Mixin (container-query) */
-@mixin container-query($breakpoint) {
-    $breakpoints: v.$breakpoints;
-    $min-width: map-get($breakpoints, $breakpoint);
-    
-    @if $min-width {
-        @container (min-width: #{$min-width}) {
-            @content;
-        }
-    } @else {
-        @warn "El breakpoint #{$breakpoint} no está definido en v.$breakpoints.";
-    }
-}
 

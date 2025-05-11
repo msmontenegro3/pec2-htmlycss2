@@ -65,3 +65,24 @@ article :where(a:not(.btn)) {
     text-decoration: underline;
     font-weight: 600;
 }
+
+/* ------------------------------------*\
+    Text block styles
+\* ------------------------------------*/
+
+.text-block{
+    margin: 1.4rem 0;
+}
+
+blockquote{
+    font-style: italic;
+    font-size: 1.4rem;
+}
+
+@include responsive('md') {
+    .text-block{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}

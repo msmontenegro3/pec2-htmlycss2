@@ -1,9 +1,9 @@
 /* Colores Modernos */
-$form-background: lch(81.45% 29 250.93);
-$form-border: lch(73.91% 40.23 273.14);
-$form-button: lch(65% 40 270);
-$form-button-hover: lch(50% 40 270);
-$form-text-color: oklch(0.1 0.05 270);
+$form-background: lch(90% 15 150);;
+$form-border: lch(80% 25 150);
+$form-button: lch(60% 30 150);
+$form-button-hover: lch(50% 30 150);
+$form-text-color: oklch(0.1 0.02 240);
 
 /* Estilos del Formulario */
 .contacto-form {
@@ -21,7 +21,7 @@ $form-text-color: oklch(0.1 0.05 270);
     }
 
     .form-control {
-        background-color: lch(92.55% 12.11 249.46);
+        background-color: lch(96.25% 6.11 248.37);
         padding: 0.75rem;
         border: 2px solid $form-border;
         border-radius: 8px;
@@ -66,5 +66,9 @@ $form-text-color: oklch(0.1 0.05 270);
     .svg{
         width: 50%;
         margin: auto;
+    }
+
+    .contacto-form{
+        display: flex;
     }
 }
